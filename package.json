@@ -1,0 +1,57 @@
+{
+  "name": "ttd-test-jump",
+  "displayName": "ttd-test-jump",
+  "description": "",
+  "author": {
+    "name": "Abdurrahman Hafez",
+    "email": "abdurrahman.hafez@gmail.com"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "url": ""
+  },
+  "activationEvents": [],
+  "icon": "switcher.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ttd-test-jump.testFileSwitcher",
+        "title": "TTD test jump - Test file switcher"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+alt+t",
+        "mac": "ctrl+alt+t",
+        "command": "ttd-test-jump.testFileSwitcher"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.76.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.2.3"
+  }
+}
