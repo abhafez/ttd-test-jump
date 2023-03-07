@@ -48,6 +48,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     let pattern = "";
 
+    if (!destination) {
+      return;
+    }
     if (!isTestToFile) {
       pattern = `${destination}{_spec,_test,spec,test,Spec,Test,.spec,.test}`;
     } else {
@@ -56,7 +59,6 @@ export function activate(context: vscode.ExtensionContext) {
     pattern += ext;
 
     vscode.workspace.findFiles(`**/*${pattern}`, null, 1).then((fileUri: vscode.Uri[]): void => {
-      console.log(fileUri);
       if (fileUri.length === 0) {
         vscode.window.setStatusBarMessage(`🧪: Can't find this pattern ${pattern}`, 3000);
         return;

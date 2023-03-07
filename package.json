@@ -1,15 +1,15 @@
 {
   "name": "ttd-test-jump",
   "publisher": "AbdurrahmanHafez",
-  "displayName": "ttd-test-jump",
+  "displayName": "Test File jump",
   "description": "",
   "author": {
     "name": "Abdurrahman Hafez",
     "email": "abdurrahman.hafez@gmail.com"
   },
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^1.70.0"
   },
   "categories": [
     "Other"
