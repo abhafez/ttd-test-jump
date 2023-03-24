@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import * as path from "path";
+import { getTestsDirectories } from "./settings";
 
 const testFilesEndings = [".spec", "_spec", ".test", "_test"];
 const testFilesEndingsCamelCase = ["Spec", "Test"];
@@ -40,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand("ttd-test-jump.testFileSwitcher", () => {
+  let disposable = vscode.commands.registerCommand("tdd-test-jump.testFileSwitcher", () => {
     const fileObject = path.parse(vscode.window.activeTextEditor?.document.fileName || "");
     const { ext, name } = fileObject;
 

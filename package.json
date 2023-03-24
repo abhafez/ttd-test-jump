@@ -1,5 +1,5 @@
 {
-  "name": "ttd-test-jump",
+  "name": "tdd-test-jump",
   "publisher": "AbdurrahmanHafez",
   "displayName": "Test File jump",
   "description": "",
@@ -15,7 +15,7 @@
     "Other"
   ],
   "repository": {
-    "url": "https://github.com/abhafez/ttd-test-jump"
+    "url": "https://github.com/abhafez/tdd-test-jump"
   },
   "activationEvents": [],
   "icon": "switcher.png",
@@ -23,17 +23,34 @@
   "contributes": {
     "commands": [
       {
-        "command": "ttd-test-jump.testFileSwitcher",
-        "title": "TTD test jump - Test file switcher"
+        "command": "tdd-test-jump.testFileSwitcher",
+        "title": "TDD test jump - Test file switcher"
       }
     ],
     "keybindings": [
       {
         "key": "ctrl+alt+t",
         "mac": "ctrl+alt+t",
-        "command": "ttd-test-jump.testFileSwitcher"
+        "command": "tdd-test-jump.testFileSwitcher"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "TDD test jump",
+      "properties": {
+        "tdd-test-jump.testsDirectoriesNames": {
+          "type": "array",
+          "default": [
+            "__tests__",
+            "__specs__",
+            "__test__",
+            "__spec__",
+            "tests",
+            "specs"
+          ],
+          "description": "Tests directories names."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
